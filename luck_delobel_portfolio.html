@@ -21,11 +21,11 @@
     --mono: 'Space Mono', monospace;
     --sans: 'Syne', sans-serif;
   }
-
+ 
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
+ 
   html { scroll-behavior: smooth; }
-
+ 
   body {
     background: var(--bg);
     color: var(--text);
@@ -33,8 +33,7 @@
     overflow-x: hidden;
     cursor: none;
   }
-
-  /* CURSOR */
+ 
   .cursor {
     position: fixed;
     width: 10px; height: 10px;
@@ -57,8 +56,7 @@
     transition: all 0.15s ease;
     opacity: 0.5;
   }
-
-  /* NOISE OVERLAY */
+ 
   body::before {
     content: '';
     position: fixed;
@@ -68,8 +66,7 @@
     z-index: 9000;
     opacity: 0.35;
   }
-
-  /* NAV */
+ 
   nav {
     position: fixed;
     top: 0; left: 0; right: 0;
@@ -113,8 +110,7 @@
   }
   .nav-links a:hover { color: var(--cyan); }
   .nav-links a:hover::after { width: 100%; }
-
-  /* HERO */
+ 
   #hero {
     min-height: 100vh;
     display: flex;
@@ -234,7 +230,7 @@
     border-color: var(--cyan);
     color: var(--cyan);
   }
-
+ 
   .hero-stats {
     position: absolute;
     right: 4rem;
@@ -257,7 +253,6 @@
     font-weight: 700;
     color: var(--cyan);
     line-height: 1;
-    counter-reset: none;
   }
   .stat-label {
     font-size: 0.7rem;
@@ -266,16 +261,13 @@
     text-transform: uppercase;
     margin-top: 0.3rem;
   }
-
+ 
   @keyframes fadeUp {
     from { opacity: 0; transform: translateY(24px); }
     to { opacity: 1; transform: translateY(0); }
   }
-
-  /* SECTION */
-  section {
-    padding: 7rem 4rem;
-  }
+ 
+  section { padding: 7rem 4rem; }
   .section-header {
     display: flex;
     align-items: center;
@@ -300,8 +292,7 @@
     letter-spacing: -0.02em;
     line-height: 1.1;
   }
-
-  /* ABOUT */
+ 
   #about { background: var(--bg2); }
   .about-grid {
     display: grid;
@@ -323,11 +314,7 @@
     border-left: 3px solid var(--cyan);
     padding-left: 1rem;
   }
-  .timeline {
-    display: flex;
-    flex-direction: column;
-    gap: 0;
-  }
+  .timeline { display: flex; flex-direction: column; gap: 0; }
   .tl-item {
     display: grid;
     grid-template-columns: 100px 1fr;
@@ -354,35 +341,18 @@
   }
   .tl-dot {
     position: absolute;
-    left: 94px;
-    top: 5px;
+    left: 94px; top: 5px;
     width: 13px; height: 13px;
     border-radius: 50%;
     background: var(--bg);
     border: 2px solid var(--cyan);
     box-shadow: 0 0 8px rgba(0,229,195,0.4);
   }
-  .tl-content {
-    padding-left: 1.5rem;
-  }
-  .tl-role {
-    font-weight: 700;
-    font-size: 0.95rem;
-    margin-bottom: 0.2rem;
-  }
-  .tl-place {
-    font-family: var(--mono);
-    font-size: 0.7rem;
-    color: var(--muted);
-    margin-bottom: 0.5rem;
-  }
-  .tl-desc {
-    font-size: 0.85rem;
-    color: var(--muted);
-    line-height: 1.6;
-  }
-
-  /* SKILLS */
+  .tl-content { padding-left: 1.5rem; }
+  .tl-role { font-weight: 700; font-size: 0.95rem; margin-bottom: 0.2rem; }
+  .tl-place { font-family: var(--mono); font-size: 0.7rem; color: var(--muted); margin-bottom: 0.5rem; }
+  .tl-desc { font-size: 0.85rem; color: var(--muted); line-height: 1.6; }
+ 
   #skills { background: var(--bg); }
   .skills-grid {
     display: grid;
@@ -408,10 +378,7 @@
     transition: transform 0.3s;
     transform-origin: left;
   }
-  .skill-category:hover {
-    border-color: var(--cyan);
-    transform: translateY(-4px);
-  }
+  .skill-category:hover { border-color: var(--cyan); transform: translateY(-4px); }
   .skill-category:hover::before { transform: scaleX(1); }
   .skill-cat-title {
     font-family: var(--mono);
@@ -422,25 +389,10 @@
     margin-bottom: 1.5rem;
   }
   .skill-list { display: flex; flex-direction: column; gap: 0.9rem; }
-  .skill-item {}
-  .skill-name-row {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 0.4rem;
-  }
+  .skill-name-row { display: flex; justify-content: space-between; margin-bottom: 0.4rem; }
   .skill-name { font-size: 0.85rem; font-weight: 600; }
-  .skill-level {
-    font-family: var(--mono);
-    font-size: 0.65rem;
-    color: var(--muted);
-    letter-spacing: 0.08em;
-  }
-  .skill-bar {
-    height: 3px;
-    background: var(--border);
-    border-radius: 2px;
-    overflow: hidden;
-  }
+  .skill-level { font-family: var(--mono); font-size: 0.65rem; color: var(--muted); letter-spacing: 0.08em; }
+  .skill-bar { height: 3px; background: var(--border); border-radius: 2px; overflow: hidden; }
   .skill-fill {
     height: 100%;
     background: linear-gradient(90deg, var(--cyan), var(--blue));
@@ -448,8 +400,7 @@
     width: 0;
     transition: width 1.2s cubic-bezier(0.4,0,0.2,1);
   }
-
-  /* PROJECTS */
+ 
   #projects { background: var(--bg2); }
   .projects-grid {
     display: grid;
@@ -473,242 +424,89 @@
     box-shadow: 0 20px 50px rgba(0,229,195,0.08);
   }
   .project-img {
-    width: 100%;
-    height: 220px;
+    width: 100%; height: 220px;
     background: var(--bg);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: var(--mono);
-    font-size: 0.7rem;
-    color: var(--muted);
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--mono); font-size: 0.7rem; color: var(--muted);
     border-bottom: 1px solid var(--border);
-    overflow: hidden;
-    position: relative;
-  }
-  .project-img-visual {
-    position: absolute;
-    inset: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    overflow: hidden; position: relative;
   }
   .project-body { padding: 1.8rem; }
-  .project-num {
-    font-family: var(--mono);
-    font-size: 0.65rem;
-    color: var(--cyan);
-    letter-spacing: 0.15em;
-    margin-bottom: 0.6rem;
-  }
-  .project-title {
-    font-size: 1.2rem;
-    font-weight: 700;
-    margin-bottom: 0.5rem;
-    letter-spacing: -0.01em;
-  }
-  .project-desc {
-    font-size: 0.85rem;
-    color: var(--muted);
-    line-height: 1.65;
-    margin-bottom: 1.2rem;
-  }
-  .project-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    margin-bottom: 1.2rem;
-  }
+  .project-num { font-family: var(--mono); font-size: 0.65rem; color: var(--cyan); letter-spacing: 0.15em; margin-bottom: 0.6rem; }
+  .project-title { font-size: 1.2rem; font-weight: 700; margin-bottom: 0.5rem; letter-spacing: -0.01em; }
+  .project-desc { font-size: 0.85rem; color: var(--muted); line-height: 1.65; margin-bottom: 1.2rem; }
+  .project-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.2rem; }
   .tag {
-    font-family: var(--mono);
-    font-size: 0.62rem;
-    letter-spacing: 0.08em;
-    padding: 0.25rem 0.65rem;
-    border: 1px solid var(--border);
-    border-radius: 2px;
-    color: var(--muted);
-    text-transform: uppercase;
+    font-family: var(--mono); font-size: 0.62rem; letter-spacing: 0.08em;
+    padding: 0.25rem 0.65rem; border: 1px solid var(--border);
+    border-radius: 2px; color: var(--muted); text-transform: uppercase;
   }
   .project-link {
-    font-family: var(--mono);
-    font-size: 0.72rem;
-    color: var(--cyan);
-    letter-spacing: 0.1em;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
+    font-family: var(--mono); font-size: 0.72rem; color: var(--cyan);
+    letter-spacing: 0.1em; display: flex; align-items: center; gap: 0.5rem;
   }
-  .project-link::after {
-    content: '→';
-    transition: transform 0.2s;
-  }
+  .project-link::after { content: '→'; transition: transform 0.2s; }
   .project-card:hover .project-link::after { transform: translateX(4px); }
-
-  /* CONTACT */
+ 
   #contact { background: var(--bg); }
-  .contact-wrap {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 5rem;
-    align-items: center;
-  }
-  .contact-left h2 { margin-bottom: 1.5rem; }
-  .contact-left p {
-    color: var(--muted);
-    line-height: 1.8;
-    margin-bottom: 2.5rem;
-    font-size: 1.05rem;
-  }
+  .contact-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+  .contact-left p { color: var(--muted); line-height: 1.8; margin-bottom: 2.5rem; font-size: 1.05rem; }
   .contact-links { display: flex; flex-direction: column; gap: 1rem; }
   .contact-link {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    color: var(--text);
-    text-decoration: none;
-    font-size: 0.9rem;
-    transition: color 0.2s;
-    group: true;
+    display: flex; align-items: center; gap: 1rem;
+    color: var(--text); text-decoration: none; font-size: 0.9rem; transition: color 0.2s;
   }
   .contact-link:hover { color: var(--cyan); }
   .contact-link-icon {
     width: 42px; height: 42px;
-    border: 1px solid var(--border);
-    border-radius: 2px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.1rem;
-    transition: border-color 0.2s;
-    flex-shrink: 0;
+    border: 1px solid var(--border); border-radius: 2px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.1rem; transition: border-color 0.2s; flex-shrink: 0;
   }
   .contact-link:hover .contact-link-icon { border-color: var(--cyan); }
-  .contact-right {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 4px;
-    padding: 2.5rem;
-  }
-  .contact-right h3 {
-    font-size: 1rem;
-    margin-bottom: 1.5rem;
-    color: var(--text);
-  }
+  .contact-right { background: var(--surface); border: 1px solid var(--border); border-radius: 4px; padding: 2.5rem; }
   .form-group { margin-bottom: 1.2rem; }
   .form-group label {
-    font-family: var(--mono);
-    font-size: 0.65rem;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--muted);
-    display: block;
-    margin-bottom: 0.5rem;
+    font-family: var(--mono); font-size: 0.65rem; letter-spacing: 0.12em;
+    text-transform: uppercase; color: var(--muted); display: block; margin-bottom: 0.5rem;
   }
-  .form-group input,
-  .form-group textarea {
-    width: 100%;
-    background: var(--bg);
-    border: 1px solid var(--border);
-    color: var(--text);
-    font-family: var(--sans);
-    font-size: 0.9rem;
-    padding: 0.75rem 1rem;
-    border-radius: 2px;
-    transition: border-color 0.2s;
-    outline: none;
-    resize: none;
+  .form-group input, .form-group textarea {
+    width: 100%; background: var(--bg); border: 1px solid var(--border);
+    color: var(--text); font-family: var(--sans); font-size: 0.9rem;
+    padding: 0.75rem 1rem; border-radius: 2px; transition: border-color 0.2s; outline: none; resize: none;
   }
-  .form-group input:focus,
-  .form-group textarea:focus { border-color: var(--cyan); }
+  .form-group input:focus, .form-group textarea:focus { border-color: var(--cyan); }
   .form-group textarea { height: 110px; }
   .form-submit {
-    width: 100%;
-    background: var(--cyan);
-    color: var(--bg);
-    border: none;
-    font-family: var(--mono);
-    font-size: 0.75rem;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    font-weight: 700;
-    padding: 1rem;
-    border-radius: 2px;
-    cursor: none;
-    transition: all 0.2s;
+    width: 100%; background: var(--cyan); color: var(--bg); border: none;
+    font-family: var(--mono); font-size: 0.75rem; letter-spacing: 0.12em;
+    text-transform: uppercase; font-weight: 700; padding: 1rem; border-radius: 2px; cursor: none; transition: all 0.2s;
   }
-  .form-submit:hover {
-    background: transparent;
-    color: var(--cyan);
-    box-shadow: inset 0 0 0 1.5px var(--cyan);
-  }
-
-  /* FOOTER */
+  .form-submit:hover { background: transparent; color: var(--cyan); box-shadow: inset 0 0 0 1.5px var(--cyan); }
+ 
   footer {
-    padding: 2rem 4rem;
-    border-top: 1px solid var(--border);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    padding: 2rem 4rem; border-top: 1px solid var(--border);
+    display: flex; justify-content: space-between; align-items: center;
   }
-  footer p {
-    font-family: var(--mono);
-    font-size: 0.65rem;
-    color: var(--muted);
-    letter-spacing: 0.08em;
-  }
+  footer p { font-family: var(--mono); font-size: 0.65rem; color: var(--muted); letter-spacing: 0.08em; }
   footer span { color: var(--cyan); }
-
-  /* SCROLL REVEAL */
-  .reveal {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.7s ease, transform 0.7s ease;
-  }
-  .reveal.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  /* COUNTER ANIMATION */
-  @keyframes countUp {
-    from { opacity: 0; }
-    to { opacity: 1; }
-  }
-
-  /* SVG ILLUSTRATIONS FOR PROJECTS */
-  .viz-sql {
-    width: 100%; height: 100%;
-    display: flex; align-items: center; justify-content: center;
-  }
-
-  /* AVAILABILITY BADGE */
+ 
+  .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+ 
   .avail-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-family: var(--mono);
-    font-size: 0.65rem;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--cyan);
-    border: 1px solid rgba(0,229,195,0.3);
-    padding: 0.4rem 0.9rem;
-    border-radius: 100px;
-    margin-bottom: 2rem;
-    background: rgba(0,229,195,0.05);
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    font-family: var(--mono); font-size: 0.65rem; letter-spacing: 0.1em;
+    text-transform: uppercase; color: var(--cyan);
+    border: 1px solid rgba(0,229,195,0.3); padding: 0.4rem 0.9rem;
+    border-radius: 100px; margin-bottom: 2rem; background: rgba(0,229,195,0.05);
   }
   .avail-dot {
-    width: 6px; height: 6px;
-    background: var(--cyan);
-    border-radius: 50%;
+    width: 6px; height: 6px; background: var(--cyan); border-radius: 50%;
     animation: blink 1.4s ease infinite;
   }
-  @keyframes blink {
-    0%,100% { opacity: 1; }
-    50% { opacity: 0.2; }
-  }
-
-  /* MOBILE */
+  @keyframes blink { 0%,100% { opacity: 1; } 50% { opacity: 0.2; } }
+ 
   @media (max-width: 900px) {
     nav { padding: 1rem 1.5rem; }
     section { padding: 5rem 1.5rem; }
@@ -722,11 +520,10 @@
 </style>
 </head>
 <body>
-
+ 
 <div class="cursor" id="cursor"></div>
 <div class="cursor-ring" id="cursorRing"></div>
-
-<!-- NAV -->
+ 
 <nav>
   <div class="nav-logo">LD_PORTFOLIO.exe</div>
   <ul class="nav-links">
@@ -737,43 +534,37 @@
     <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
-
+ 
 <!-- HERO -->
 <section id="hero">
   <div class="hero-grid-bg"></div>
   <div class="hero-glow"></div>
-
   <div class="hero-content">
     <div class="hero-tag">Data Analyst · En alternance à partir de sept. 2025</div>
-
     <div class="avail-badge" style="opacity:0;animation:fadeUp 0.8s 0.3s forwards">
       <span class="avail-dot"></span>
       Disponible — Alternance 2 ans
     </div>
-
     <h1>
       Luck<br>
       <span class="highlight">Delobel</span>
     </h1>
-
     <p class="hero-desc">
       Je transforme la donnée brute en décisions concrètes. SQL, Python, Power BI —
       et un parcours atypique qui fait la différence.
     </p>
-
     <div class="hero-cta">
       <a href="#projects" class="btn btn-primary">Voir mes projets</a>
       <a href="mailto:lucktravail@gmail.com" class="btn btn-outline">Me contacter</a>
-      <a href="cv/Luck_Delobel_CV.pdf" download="Luck_Delobel_CV_alternance.pdf" class="btn btn-outline" style="display:flex;align-items:center;gap:0.5rem;">
+      <a href="cv/Luck_Delobel_CV.pdf" download="Luck_Delobel_CV.pdf" class="btn btn-outline" style="display:flex;align-items:center;gap:0.5rem;">
         <svg width="13" height="13" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0"><path d="M7 1v8M4 6l3 3 3-3M2 11h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
         Télécharger CV
       </a>
     </div>
   </div>
-
   <div class="hero-stats">
     <div class="stat-item">
-      <div class="stat-num" data-count="3">0</div>
+      <div class="stat-num" data-count="4">0</div>
       <div class="stat-label">Projets Data</div>
     </div>
     <div class="stat-item">
@@ -786,7 +577,7 @@
     </div>
   </div>
 </section>
-
+ 
 <!-- ABOUT -->
 <section id="about">
   <div class="section-header reveal">
@@ -794,7 +585,6 @@
     <div class="section-line"></div>
     <h2>À propos</h2>
   </div>
-
   <div class="about-grid">
     <div class="about-text reveal">
       <div class="bold-line">
@@ -817,7 +607,6 @@
       </p>
       <p>📍 Villeneuve d'Ascq (59) · Permis B & A</p>
     </div>
-
     <div class="timeline reveal">
       <div class="tl-item">
         <div class="tl-date">2026<br>→ Actuel</div>
@@ -867,7 +656,7 @@
     </div>
   </div>
 </section>
-
+ 
 <!-- SKILLS -->
 <section id="skills">
   <div class="section-header reveal">
@@ -875,8 +664,9 @@
     <div class="section-line"></div>
     <h2>Compétences</h2>
   </div>
-
+ 
   <div class="skills-grid">
+    <!-- Langages & Requêtes -->
     <div class="skill-category reveal">
       <div class="skill-cat-title">// Langages & Requêtes</div>
       <div class="skill-list">
@@ -898,13 +688,18 @@
         </div>
       </div>
     </div>
-
+ 
+    <!-- Visualisation & BI -->
     <div class="skill-category reveal">
       <div class="skill-cat-title">// Visualisation & BI</div>
       <div class="skill-list">
         <div class="skill-item">
           <div class="skill-name-row"><span class="skill-name">Power BI</span><span class="skill-level">Avancé</span></div>
           <div class="skill-bar"><div class="skill-fill" data-width="88"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-name-row"><span class="skill-name">Streamlit</span><span class="skill-level">Avancé</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
         </div>
         <div class="skill-item">
           <div class="skill-name-row"><span class="skill-name">Excel</span><span class="skill-level">Avancé</span></div>
@@ -920,7 +715,27 @@
         </div>
       </div>
     </div>
-
+ 
+    <!-- IA & Data Science -->
+    <div class="skill-category reveal">
+      <div class="skill-cat-title">// IA & Data Science</div>
+      <div class="skill-list">
+        <div class="skill-item">
+          <div class="skill-name-row"><span class="skill-name">Machine Learning</span><span class="skill-level">Intermédiaire</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-width="60"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-name-row"><span class="skill-name">NLP</span><span class="skill-level">Intermédiaire</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-width="60"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-name-row"><span class="skill-name">Scraping</span><span class="skill-level">Intermédiaire</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-width="60"></div></div>
+        </div>
+      </div>
+    </div>
+ 
+    <!-- Bases de données & Outils -->
     <div class="skill-category reveal">
       <div class="skill-cat-title">// Bases de données & Outils</div>
       <div class="skill-list">
@@ -940,25 +755,10 @@
           <div class="skill-name-row"><span class="skill-name">PowerPoint</span><span class="skill-level">Avancé</span></div>
           <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
         </div>
-        <div class="skill-item">
-          <div class="skill-name-row"><span class="skill-name">Machine Learning</span><span class="skill-level">Intermédiaire</span></div>
-          <div class="skill-bar"><div class="skill-fill" data-width="60"></div></div>
-        </div>
-        <div class="skill-item">
-          <div class="skill-name-row"><span class="skill-name">NLP</span><span class="skill-level">Intermédiaire</span></div>
-          <div class="skill-bar"><div class="skill-fill" data-width="60"></div></div>
-        </div>
-        <div class="skill-item">
-          <div class="skill-name-row"><span class="skill-name">Streamlit</span><span class="skill-level">Avancé</span></div>
-          <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
-        </div>
-        <div class="skill-item">
-          <div class="skill-name-row"><span class="skill-name">Scraping</span><span class="skill-level">Intermédiaire</span></div>
-          <div class="skill-bar"><div class="skill-fill" data-width="60"></div></div>
-        </div>
       </div>
     </div>
-
+ 
+    <!-- Soft Skills -->
     <div class="skill-category reveal">
       <div class="skill-cat-title">// Soft Skills & Management</div>
       <div class="skill-list">
@@ -976,19 +776,20 @@
         </div>
       </div>
     </div>
-
-    <div class="skill-category reveal" style="grid-column: span 2">
+ 
+    <!-- Langues -->
+    <div class="skill-category reveal">
       <div class="skill-cat-title">// Langues</div>
-      <div style="display:flex; gap:2rem;">
-        <div class="skill-item" style="flex:1">
+      <div class="skill-list">
+        <div class="skill-item">
           <div class="skill-name-row"><span class="skill-name">Français</span><span class="skill-level">Natif</span></div>
           <div class="skill-bar"><div class="skill-fill" data-width="100"></div></div>
         </div>
-        <div class="skill-item" style="flex:1">
+        <div class="skill-item">
           <div class="skill-name-row"><span class="skill-name">Anglais</span><span class="skill-level">Base</span></div>
           <div class="skill-bar"><div class="skill-fill" data-width="30"></div></div>
         </div>
-        <div class="skill-item" style="flex:1">
+        <div class="skill-item">
           <div class="skill-name-row"><span class="skill-name">Japonais</span><span class="skill-level">Base</span></div>
           <div class="skill-bar"><div class="skill-fill" data-width="15"></div></div>
         </div>
@@ -996,7 +797,7 @@
     </div>
   </div>
 </section>
-
+ 
 <!-- EXPERIENCE PRO DATA -->
 <section id="experience" style="background: var(--bg); padding-top: 0; padding-bottom: 5rem;">
   <div style="border-top: 1px solid var(--border); padding-top: 5rem;">
@@ -1005,20 +806,70 @@
     <div class="section-line"></div>
     <h2>Expérience Pro Data</h2>
   </div>
-
-  <!-- SUNELIS CARD LARGE -->
+ 
+  <!-- MOLINEL CARD (2026 — le plus récent en premier) -->
+  <div class="reveal" style="background: var(--surface); border: 1px solid var(--border); border-radius: 4px; overflow: hidden; display: grid; grid-template-columns: 1fr 1.4fr; transition: border-color 0.3s; position: relative; margin-bottom: 2rem;">
+    <div style="border-right: 1px solid var(--border); position: relative; overflow: hidden; min-height: 260px;">
+      <svg width="100%" height="100%" viewBox="0 0 300 260" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+        <rect width="300" height="260" fill="#080c10"/>
+        <line x1="40" y1="20" x2="40" y2="235" stroke="#1e2a38" stroke-width="1.5"/>
+        <line x1="40" y1="235" x2="285" y2="235" stroke="#1e2a38" stroke-width="1.5"/>
+        <line x1="40" y1="60" x2="285" y2="60" stroke="#1e2a38" stroke-width="0.5" stroke-dasharray="3,4"/>
+        <line x1="40" y1="100" x2="285" y2="100" stroke="#1e2a38" stroke-width="0.5" stroke-dasharray="3,4"/>
+        <line x1="40" y1="140" x2="285" y2="140" stroke="#1e2a38" stroke-width="0.5" stroke-dasharray="3,4"/>
+        <line x1="40" y1="180" x2="285" y2="180" stroke="#1e2a38" stroke-width="0.5" stroke-dasharray="3,4"/>
+        <rect x="55" y="100" width="28" height="135" fill="rgba(0,229,195,0.25)" rx="2"/>
+        <rect x="95" y="130" width="28" height="105" fill="rgba(0,229,195,0.2)" rx="2"/>
+        <rect x="135" y="80" width="28" height="155" fill="rgba(0,229,195,0.3)" rx="2"/>
+        <rect x="175" y="115" width="28" height="120" fill="rgba(59,130,246,0.25)" rx="2"/>
+        <rect x="215" y="70" width="28" height="165" fill="rgba(0,229,195,0.35)" rx="2"/>
+        <rect x="255" y="95" width="28" height="140" fill="rgba(59,130,246,0.2)" rx="2"/>
+        <rect x="55" y="100" width="28" height="4" fill="#00e5c3" rx="1" opacity="0.8"/>
+        <rect x="95" y="130" width="28" height="4" fill="#00e5c3" rx="1" opacity="0.7"/>
+        <rect x="135" y="80" width="28" height="4" fill="#00e5c3" rx="1" opacity="0.9"/>
+        <rect x="175" y="115" width="28" height="4" fill="#3b82f6" rx="1" opacity="0.8"/>
+        <rect x="215" y="70" width="28" height="4" fill="#00e5c3" rx="1" opacity="0.9"/>
+        <rect x="255" y="95" width="28" height="4" fill="#3b82f6" rx="1" opacity="0.7"/>
+        <text x="150" y="15" font-family="Space Mono" font-size="7" fill="#6b7e93" text-anchor="middle" letter-spacing="2">EXCEL · REPORTING · FLUX</text>
+      </svg>
+    </div>
+    <div style="padding: 2.5rem;">
+      <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:1rem;">
+        <div>
+          <div style="font-family:var(--mono); font-size:0.65rem; color:var(--cyan); letter-spacing:0.15em; margin-bottom:0.5rem;">// STAGE · 2026</div>
+          <div style="font-size:1.4rem; font-weight:800; letter-spacing:-0.01em; margin-bottom:0.3rem;">Data Analyst Stagiaire</div>
+          <div style="font-family:var(--mono); font-size:0.72rem; color:var(--muted);">Molinel · 27 juil. – 04 sept. 2026 · Wasquehal (59)</div>
+        </div>
+        <div style="font-family:var(--mono); font-size:0.65rem; color:var(--muted); border:1px solid var(--border); padding:0.3rem 0.7rem; border-radius:2px; white-space:nowrap;">6 semaines</div>
+      </div>
+      <p style="color:var(--muted); font-size:0.9rem; line-height:1.75; margin-bottom:1.5rem;">
+        Stage au sein de Molinel, fabricant français de vêtements professionnels.
+        Participation à l'analyse des flux de production et de distribution,
+        création de tableaux de bord Excel et Power BI pour le suivi des indicateurs
+        opérationnels. Contribution à l'optimisation du reporting interne et à la
+        structuration des données métiers.
+      </p>
+      <div style="display:flex; flex-wrap:wrap; gap:0.5rem;">
+        <span class="tag">Excel</span>
+        <span class="tag">Power BI</span>
+        <span class="tag">Reporting</span>
+        <span class="tag">Analyse opérationnelle</span>
+        <span class="tag">Flux de données</span>
+      </div>
+    </div>
+  </div>
+ 
+  <!-- SUNELIS CARD (2025) -->
   <div class="reveal" style="background: var(--surface); border: 1px solid var(--border); border-radius: 4px; overflow: hidden; display: grid; grid-template-columns: 1fr 1.4fr; transition: border-color 0.3s; position: relative;">
     <div style="border-right: 1px solid var(--border); position: relative; overflow: hidden; min-height: 260px;">
       <svg width="100%" height="100%" viewBox="0 0 300 260" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
         <rect width="300" height="260" fill="#080c10"/>
         <line x1="40" y1="20" x2="40" y2="235" stroke="#1e2a38" stroke-width="1.5"/>
         <line x1="40" y1="235" x2="285" y2="235" stroke="#1e2a38" stroke-width="1.5"/>
-        <!-- Grid -->
         <line x1="40" y1="60" x2="285" y2="60" stroke="#1e2a38" stroke-width="0.5" stroke-dasharray="3,4"/>
         <line x1="40" y1="100" x2="285" y2="100" stroke="#1e2a38" stroke-width="0.5" stroke-dasharray="3,4"/>
         <line x1="40" y1="140" x2="285" y2="140" stroke="#1e2a38" stroke-width="0.5" stroke-dasharray="3,4"/>
         <line x1="40" y1="180" x2="285" y2="180" stroke="#1e2a38" stroke-width="0.5" stroke-dasharray="3,4"/>
-        <!-- Scatter -->
         <circle cx="80" cy="180" r="5" fill="#00e5c3" opacity="0.6"/>
         <circle cx="105" cy="140" r="7" fill="#00e5c3" opacity="0.5"/>
         <circle cx="135" cy="160" r="4" fill="#3b82f6" opacity="0.7"/>
@@ -1027,7 +878,6 @@
         <circle cx="220" cy="80" r="8" fill="#00e5c3" opacity="0.6"/>
         <circle cx="250" cy="100" r="5" fill="#3b82f6" opacity="0.5"/>
         <circle cx="270" cy="65" r="10" fill="#00e5c3" opacity="0.4"/>
-        <!-- Trend -->
         <line x1="70" y1="195" x2="280" y2="55" stroke="#00e5c3" stroke-width="1.5" stroke-dasharray="5,4" opacity="0.35"/>
         <text x="150" y="15" font-family="Space Mono" font-size="7" fill="#6b7e93" text-anchor="middle" letter-spacing="2">SQL · ANALYSE · DATA</text>
       </svg>
@@ -1037,7 +887,7 @@
         <div>
           <div style="font-family:var(--mono); font-size:0.65rem; color:var(--cyan); letter-spacing:0.15em; margin-bottom:0.5rem;">// STAGE · 2025</div>
           <div style="font-size:1.4rem; font-weight:800; letter-spacing:-0.01em; margin-bottom:0.3rem;">Data Analyst Stagiaire</div>
-          <div style="font-family:var(--mono); font-size:0.72rem; color:var(--muted);">Sunelis · Juillet – Août 2025</div>
+          <div style="font-family:var(--mono); font-size:0.72rem; color:var(--muted);">Sunelis · Juillet 2025</div>
         </div>
         <div style="font-family:var(--mono); font-size:0.65rem; color:var(--muted); border:1px solid var(--border); padding:0.3rem 0.7rem; border-radius:2px; white-space:nowrap;">1 semaine</div>
       </div>
@@ -1056,9 +906,10 @@
       </div>
     </div>
   </div>
+ 
   </div>
 </section>
-
+ 
 <!-- PROJECTS -->
 <section id="projects" style="background: var(--bg2);">
   <div class="section-header reveal">
@@ -1066,9 +917,9 @@
     <div class="section-line"></div>
     <h2>Projets</h2>
   </div>
-
+ 
   <div class="projects-grid">
-
+ 
     <!-- PROJET 1 -->
     <div class="project-card reveal">
       <a href="https://wildcodeschool.github.io/data-training-resources/projet/projet-1/" target="_blank" style="display:block; text-decoration:none; color:inherit;">
@@ -1100,7 +951,7 @@
       </div>
       <div class="project-body">
         <div class="project-num">// Projet 01 · Wild Code School</div>
-        <div class="project-title">Audit Toys & Models</div>
+        <div class="project-title">Audit Toys &amp; Models</div>
         <div class="project-desc">
           Exploitation complète d'une base de données d'une entreprise de jouets.
           Calcul de KPIs (ventes, finances, logistique, RH) en SQL et création
@@ -1112,10 +963,9 @@
           <span class="tag">DAX</span>
           <span class="tag">KPIs</span>
         </div>
-        <div class="project-link">Voir le projet →</div>
+        <div class="project-link">Voir le projet</div>
       </div>
       </a>
-      <!-- Bouton PDF séparé -->
       <div style="padding: 0 1.8rem 1.8rem; border-top: 1px solid var(--border); margin-top: 0;">
         <a href="projets/presentation.pdf" target="_blank"
            style="display:inline-flex; align-items:center; gap:0.55rem; font-family:var(--mono); font-size:0.72rem; letter-spacing:0.1em; color:var(--accent); text-decoration:none; padding-top:1rem; transition:opacity 0.2s;"
@@ -1129,7 +979,7 @@
         </a>
       </div>
     </div>
-
+ 
     <!-- PROJET 2 -->
     <div class="project-card reveal">
       <a href="https://wildcodeschool.github.io/data-training-resources/projet/projet-2/" target="_blank" style="display:block; text-decoration:none; color:inherit;">
@@ -1179,8 +1029,8 @@
         <div class="project-link">Voir le projet</div>
       </div>
       </a>
-      <!-- Bouton Power BI séparé -->
-      <div style="padding: 0 1.8rem 1.8rem; border-top: 1px solid var(--border); margin-top: 0;">
+      <!-- Liens Power BI + Streamlit -->
+      <div style="padding: 0 1.8rem 1.8rem; border-top: 1px solid var(--border); margin-top: 0; display:flex; flex-direction:column; gap:0.5rem;">
         <a href="https://1drv.ms/u/c/de3baab288d9a095/IQAhwbgpDIzERrTfxPm1AI2MAUQhhs9qhu7s6Isp-18P8HM?e=jXk2tr" target="_blank"
            style="display:inline-flex; align-items:center; gap:0.55rem; font-family:var(--mono); font-size:0.72rem; letter-spacing:0.1em; color:var(--accent); text-decoration:none; padding-top:1rem; transition:opacity 0.2s;"
            onmouseenter="this.style.opacity='0.7'" onmouseleave="this.style.opacity='1'">
@@ -1192,85 +1042,169 @@
           </svg>
           PowerBI des séries projet 2
         </a>
+        <a href="https://projet2-cg7bgykemcvaxxpdws7ld4.streamlit.app/" target="_blank"
+           style="display:inline-flex; align-items:center; gap:0.55rem; font-family:var(--mono); font-size:0.72rem; letter-spacing:0.1em; color:var(--cyan); text-decoration:none; transition:opacity 0.2s;"
+           onmouseenter="this.style.opacity='0.7'" onmouseleave="this.style.opacity='1'">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          Voir l'app Streamlit
+        </a>
       </div>
     </div>
-    
-<div class="project-card reveal">
-  <div class="project-img"><div style="font-family:var(--mono); color:var(--cyan); font-size:0.8rem;">AUTOMATISATION · RECRUTEMENT</div></div>
-  <div class="project-body">
-    <div class="project-num">// Projet Client · En cours</div>
-    <div class="project-title">Automatisation d'un processus de recrutement</div>
-    <div class="project-desc">
-      Développement d'une solution automatisée pour un client basé à Paris.
-      Optimisation du traitement des candidatures et automatisation des tâches répétitives.
+ 
+    <!-- PROJET 3 : Automatisation recrutement -->
+    <div class="project-card reveal" style="cursor:default;">
+      <div class="project-img">
+        <svg width="100%" height="100%" viewBox="0 0 500 220" xmlns="http://www.w3.org/2000/svg">
+          <rect width="500" height="220" fill="#0d1117"/>
+          <!-- Flow boxes -->
+          <rect x="28" y="84" width="88" height="52" rx="3" fill="#111820" stroke="#00e5c3" stroke-width="1.5"/>
+          <text x="72" y="107" font-family="Space Mono" font-size="8" fill="#00e5c3" text-anchor="middle">CV</text>
+          <text x="72" y="122" font-family="Space Mono" font-size="7" fill="#6b7e93" text-anchor="middle">Parsing</text>
+          <line x1="116" y1="110" x2="148" y2="110" stroke="#1e2a38" stroke-width="1.5"/>
+          <polygon points="145,106 153,110 145,114" fill="#1e2a38"/>
+          <rect x="150" y="84" width="88" height="52" rx="3" fill="#111820" stroke="#3b82f6" stroke-width="1.5"/>
+          <text x="194" y="107" font-family="Space Mono" font-size="8" fill="#3b82f6" text-anchor="middle">NLP</text>
+          <text x="194" y="122" font-family="Space Mono" font-size="7" fill="#6b7e93" text-anchor="middle">Scoring</text>
+          <line x1="238" y1="110" x2="270" y2="110" stroke="#1e2a38" stroke-width="1.5"/>
+          <polygon points="267,106 275,110 267,114" fill="#1e2a38"/>
+          <rect x="272" y="84" width="88" height="52" rx="3" fill="#111820" stroke="#f0a500" stroke-width="1.5"/>
+          <text x="316" y="107" font-family="Space Mono" font-size="8" fill="#f0a500" text-anchor="middle">RANK</text>
+          <text x="316" y="122" font-family="Space Mono" font-size="7" fill="#6b7e93" text-anchor="middle">Candidats</text>
+          <line x1="360" y1="110" x2="392" y2="110" stroke="#1e2a38" stroke-width="1.5"/>
+          <polygon points="389,106 397,110 389,114" fill="#1e2a38"/>
+          <rect x="394" y="84" width="80" height="52" rx="3" fill="#111820" stroke="#00e5c3" stroke-width="1.5"/>
+          <text x="434" y="107" font-family="Space Mono" font-size="8" fill="#00e5c3" text-anchor="middle">MAIL</text>
+          <text x="434" y="122" font-family="Space Mono" font-size="7" fill="#6b7e93" text-anchor="middle">Auto</text>
+          <!-- Profile bubbles top -->
+          <circle cx="72" cy="48" r="10" fill="none" stroke="#00e5c3" stroke-width="1" opacity="0.5"/>
+          <circle cx="72" cy="45" r="5" fill="#00e5c3" opacity="0.3"/>
+          <circle cx="110" cy="52" r="8" fill="none" stroke="#00e5c3" stroke-width="1" opacity="0.35"/>
+          <circle cx="44" cy="55" r="7" fill="none" stroke="#3b82f6" stroke-width="1" opacity="0.35"/>
+          <text x="250" y="185" font-family="Space Mono" font-size="9" fill="#6b7e93" text-anchor="middle" letter-spacing="2">PYTHON · NLP · AUTOMATISATION · PARIS</text>
+        </svg>
+      </div>
+      <div class="project-body">
+        <div class="project-num">// Projet 03 · Client Réel · Paris</div>
+        <div class="project-title">Automatisation du Recrutement</div>
+        <div class="project-desc">
+          Développement d'un pipeline d'automatisation du processus de recrutement
+          pour un vrai client parisien. Parsing de CV, scoring automatisé des candidats
+          par NLP et envoi automatique de mails de réponse selon les profils détectés.
+        </div>
+        <div class="project-tags">
+          <span class="tag">Python</span>
+          <span class="tag">NLP</span>
+          <span class="tag">Automatisation</span>
+          <span class="tag">Client réel</span>
+        </div>
+        <div style="display:flex; align-items:center; gap:0.6rem;">
+          <div class="project-link" style="color:var(--muted)">Lien à venir</div>
+          <span style="font-family:var(--mono); font-size:0.6rem; color:var(--border); border:1px solid var(--border); padding:0.15rem 0.5rem; border-radius:2px;">EN COURS</span>
+        </div>
+      </div>
     </div>
-    <div class="project-tags">
-      <span class="tag">Python</span>
-      <span class="tag">Automatisation</span>
-      <span class="tag">Excel</span>
-      <span class="tag">Data</span>
+ 
+    <!-- PROJET 4 : Site web Île Maurice -->
+    <div class="project-card reveal" style="cursor:default;">
+      <div class="project-img">
+        <svg width="100%" height="100%" viewBox="0 0 500 220" xmlns="http://www.w3.org/2000/svg">
+          <rect width="500" height="220" fill="#0d1117"/>
+          <!-- Browser chrome -->
+          <rect x="28" y="22" width="444" height="172" rx="4" fill="#111820" stroke="#1e2a38" stroke-width="1.5"/>
+          <rect x="28" y="22" width="444" height="28" rx="4" fill="#0d1117"/>
+          <circle cx="48" cy="36" r="5" fill="#1e2a38"/>
+          <circle cx="65" cy="36" r="5" fill="#1e2a38"/>
+          <circle cx="82" cy="36" r="5" fill="#1e2a38"/>
+          <rect x="98" y="28" width="300" height="16" rx="2" fill="#1e2a38"/>
+          <text x="248" y="40" font-family="Space Mono" font-size="7" fill="#6b7e93" text-anchor="middle">client-ile-maurice.com</text>
+          <!-- Page content -->
+          <rect x="44" y="62" width="190" height="11" rx="2" fill="rgba(0,229,195,0.3)"/>
+          <rect x="44" y="80" width="145" height="7" rx="2" fill="#1e2a38"/>
+          <rect x="44" y="93" width="125" height="7" rx="2" fill="#1e2a38"/>
+          <rect x="44" y="110" width="78" height="22" rx="2" fill="rgba(0,229,195,0.15)" stroke="#00e5c3" stroke-width="1"/>
+          <text x="83" y="125" font-family="Space Mono" font-size="7" fill="#00e5c3" text-anchor="middle">Découvrir →</text>
+          <!-- Hero image zone -->
+          <rect x="268" y="56" width="180" height="125" rx="3" fill="#080c10" stroke="#1e2a38"/>
+          <!-- Island illustration -->
+          <ellipse cx="358" cy="155" rx="62" ry="16" fill="rgba(59,130,246,0.25)"/>
+          <ellipse cx="358" cy="140" rx="38" ry="22" fill="rgba(0,229,195,0.18)"/>
+          <ellipse cx="358" cy="122" rx="22" ry="18" fill="rgba(0,229,195,0.28)"/>
+          <circle cx="358" cy="105" r="12" fill="rgba(240,165,0,0.2)"/>
+          <!-- MDP schema -->
+          <rect x="44" y="152" width="38" height="20" rx="1" fill="#111820" stroke="#3b82f6" stroke-width="1"/>
+          <text x="63" y="165" font-family="Space Mono" font-size="6" fill="#3b82f6" text-anchor="middle">MDP</text>
+          <line x1="82" y1="162" x2="100" y2="162" stroke="#1e2a38" stroke-width="1"/>
+          <rect x="100" y="152" width="42" height="20" rx="1" fill="#111820" stroke="#f0a500" stroke-width="1"/>
+          <text x="121" y="165" font-family="Space Mono" font-size="6" fill="#f0a500" text-anchor="middle">DATA</text>
+          <line x1="142" y1="162" x2="160" y2="162" stroke="#1e2a38" stroke-width="1"/>
+          <rect x="160" y="152" width="42" height="20" rx="1" fill="#111820" stroke="#00e5c3" stroke-width="1"/>
+          <text x="181" y="165" font-family="Space Mono" font-size="6" fill="#00e5c3" text-anchor="middle">WEB</text>
+          <text x="250" y="208" font-family="Space Mono" font-size="9" fill="#6b7e93" text-anchor="middle" letter-spacing="2">WEB · MDP · CLIENT RÉEL · ÎLE MAURICE</text>
+        </svg>
+      </div>
+      <div class="project-body">
+        <div class="project-num">// Projet 04 · Client Réel · Île Maurice</div>
+        <div class="project-title">Site Web avec MDP</div>
+        <div class="project-desc">
+          Création complète d'un site web pour un client basé à l'Île Maurice,
+          intégrant une modélisation de données (MDP) pour structurer et gérer
+          les contenus et les flux d'informations du projet client.
+        </div>
+        <div class="project-tags">
+          <span class="tag">Web</span>
+          <span class="tag">MDP</span>
+          <span class="tag">Base de données</span>
+          <span class="tag">Client réel</span>
+        </div>
+        <div style="display:flex; align-items:center; gap:0.6rem;">
+          <div class="project-link" style="color:var(--muted)">Lien à venir</div>
+          <span style="font-family:var(--mono); font-size:0.6rem; color:var(--border); border:1px solid var(--border); padding:0.15rem 0.5rem; border-radius:2px;">EN COURS</span>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
-
-<div class="project-card reveal">
-  <div class="project-img"><div style="font-family:var(--mono); color:var(--cyan); font-size:0.8rem;">SITE WEB · MPD · CLIENT</div></div>
-  <div class="project-body">
-    <div class="project-num">// Projet Client · En cours</div>
-    <div class="project-title">Création d'un site web avec MPD</div>
-    <div class="project-desc">
-      Conception d'un site web pour un client basé à l'Île Maurice.
-      Réalisation du MPD et structuration de la base de données.
-    </div>
-    <div class="project-tags">
-      <span class="tag">MPD</span>
-      <span class="tag">SQL</span>
-      <span class="tag">Base de données</span>
-      <span class="tag">Web</span>
-    </div>
-  </div>
-</div>
-
-
-    <!-- CARD CE QUI ME DIFFÉRENCIE -->
-    <div class="project-card reveal" style="background: linear-gradient(135deg, #111820 0%, #0d1117 100%); border-color: rgba(0,229,195,0.2);">
+ 
+    <!-- CARD CE QUI ME DIFFÉRENCIE — full width -->
+    <div class="project-card reveal" style="background: linear-gradient(135deg, #111820 0%, #0d1117 100%); border-color: rgba(0,229,195,0.2); grid-column: span 2;">
       <div class="project-body" style="padding:2.5rem; display:flex; flex-direction:column; justify-content:center; height:100%;">
         <div class="project-num">// Ce qui me différencie</div>
-        <div class="project-title" style="font-size:1.4rem; margin-bottom:1.5rem;">Un profil<br><span style="color:var(--cyan)">atypique</span><br>= une vraie valeur</div>
-        <div style="display:flex; flex-direction:column; gap:0.8rem;">
-          <div style="display:flex; align-items:center; gap:0.8rem; font-size:0.85rem; color:var(--muted);">
-            <span style="color:var(--cyan); font-family:var(--mono)">→</span>
-            2 ans de management d'équipe
-          </div>
-          <div style="display:flex; align-items:center; gap:0.8rem; font-size:0.85rem; color:var(--muted);">
-            <span style="color:var(--cyan); font-family:var(--mono)">→</span>
-            Sens du résultat et de la rigueur
-          </div>
-          <div style="display:flex; align-items:center; gap:0.8rem; font-size:0.85rem; color:var(--muted);">
-            <span style="color:var(--cyan); font-family:var(--mono)">→</span>
-            Capacité à vulgariser la data
-          </div>
-          <div style="display:flex; align-items:center; gap:0.8rem; font-size:0.85rem; color:var(--muted);">
-            <span style="color:var(--cyan); font-family:var(--mono)">→</span>
-            Curiosité et apprentissage rapide
-          </div>
-          <div style="display:flex; align-items:center; gap:0.8rem; font-size:0.85rem; color:var(--muted);">
-            <span style="color:var(--cyan); font-family:var(--mono)">→</span>
-            Mentalité artisane = passion du travail bien fait
+        <div style="display:grid; grid-template-columns:auto 1fr; gap:3rem; align-items:center; margin-top:0.5rem;">
+          <div class="project-title" style="font-size:1.4rem; margin-bottom:0;">Un profil<br><span style="color:var(--cyan)">atypique</span><br>= une vraie valeur</div>
+          <div style="display:flex; flex-direction:column; gap:0.8rem;">
+            <div style="display:flex; align-items:center; gap:0.8rem; font-size:0.85rem; color:var(--muted);">
+              <span style="color:var(--cyan); font-family:var(--mono)">→</span>
+              2 ans de management d'équipe
+            </div>
+            <div style="display:flex; align-items:center; gap:0.8rem; font-size:0.85rem; color:var(--muted);">
+              <span style="color:var(--cyan); font-family:var(--mono)">→</span>
+              Sens du résultat et de la rigueur
+            </div>
+            <div style="display:flex; align-items:center; gap:0.8rem; font-size:0.85rem; color:var(--muted);">
+              <span style="color:var(--cyan); font-family:var(--mono)">→</span>
+              Capacité à vulgariser la data
+            </div>
+            <div style="display:flex; align-items:center; gap:0.8rem; font-size:0.85rem; color:var(--muted);">
+              <span style="color:var(--cyan); font-family:var(--mono)">→</span>
+              Curiosité et apprentissage rapide
+            </div>
+            <div style="display:flex; align-items:center; gap:0.8rem; font-size:0.85rem; color:var(--muted);">
+              <span style="color:var(--cyan); font-family:var(--mono)">→</span>
+              Mentalité artisane = passion du travail bien fait
+            </div>
           </div>
         </div>
       </div>
     </div>
-
+ 
   </div>
 </section>
-
+ 
 <!-- CONTACT -->
 <section id="contact">
   <div class="section-header reveal">
     <span class="section-num">05</span>
   </div>
-
   <div class="contact-wrap">
     <div class="contact-left reveal">
       <p>
@@ -1309,45 +1243,42 @@
         </div>
       </div>
     </div>
-
     <div class="contact-right reveal">
       <h3 style="font-family:var(--mono); font-size:0.7rem; letter-spacing:0.15em; color:var(--cyan); text-transform:uppercase; margin-bottom:1.5rem">// Envoyer un message</h3>
-      <div class="form-group">
-      <form action= "https://docs.google.com/forms/d/e/1FAIpQLScUe0bUc1CSSQqHM0NM7ZgqUjLydX_2Tr9Vsqkk0WpJIE8bHQ/formResponse" methode ="POST">
-        <label>Nom</label>
-        <input type="text" placeholder="Votre nom" name ="entry.575419369">
-      </div>
-      <div class="form-group">
-        <label>Email</label>
-        <input type="email" placeholder="votre@email.com" name = "entry.1916706108">
-      </div>
-      <div class="form-group">
-        <label>Message</label>
-        <textarea placeholder="Votre opportunité d'alternance..." name = "entry.1745326552"></textarea>
-      </div>
-      <button class="form-submit" onclick="handleFormSubmit(this)">Envoyer →</button>
+      <form action="https://docs.google.com/forms/d/e/1FAIpQLScUe0bUc1CSSQqHM0NM7ZgqUjLydX_2Tr9Vsqkk0WpJIE8bHQ/formResponse" method="POST">
+        <div class="form-group">
+          <label>Nom</label>
+          <input type="text" placeholder="Votre nom" name="entry.575419369">
+        </div>
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" placeholder="votre@email.com" name="entry.1916706108">
+        </div>
+        <div class="form-group">
+          <label>Message</label>
+          <textarea placeholder="Votre opportunité d'alternance..." name="entry.1745326552"></textarea>
+        </div>
+        <button class="form-submit" onclick="handleFormSubmit(this)">Envoyer →</button>
+      </form>
     </div>
   </div>
 </section>
-
+ 
 <!-- FOOTER -->
 <footer>
   <p>© 2025 <span>Luck Delobel</span> · Data Analyst</p>
   <p>Conçu avec <span>∅</span> templates — 100% custom</p>
 </footer>
-
+ 
 <script>
-  // CURSOR
   const cursor = document.getElementById('cursor');
   const cursorRing = document.getElementById('cursorRing');
   let mx = 0, my = 0, rx = 0, ry = 0;
-
   document.addEventListener('mousemove', e => {
     mx = e.clientX; my = e.clientY;
     cursor.style.left = mx + 'px';
     cursor.style.top = my + 'px';
   });
-
   function animateCursor() {
     rx += (mx - rx) * 0.12;
     ry += (my - ry) * 0.12;
@@ -1356,27 +1287,22 @@
     requestAnimationFrame(animateCursor);
   }
   animateCursor();
-
   document.querySelectorAll('a, button, .project-card').forEach(el => {
     el.addEventListener('mouseenter', () => {
       cursor.style.transform = 'translate(-50%,-50%) scale(2)';
       cursorRing.style.transform = 'translate(-50%,-50%) scale(1.4)';
-      cursorRing.style.borderColor = 'var(--cyan)';
     });
     el.addEventListener('mouseleave', () => {
       cursor.style.transform = 'translate(-50%,-50%) scale(1)';
       cursorRing.style.transform = 'translate(-50%,-50%) scale(1)';
-      cursorRing.style.borderColor = 'var(--cyan)';
     });
   });
-
-  // SCROLL REVEAL
+ 
   const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry, i) => {
+    entries.forEach(entry => {
       if (entry.isIntersecting) {
         setTimeout(() => {
           entry.target.classList.add('visible');
-          // Trigger skill bars
           entry.target.querySelectorAll('.skill-fill').forEach(bar => {
             bar.style.width = bar.dataset.width + '%';
           });
@@ -1385,13 +1311,11 @@
       }
     });
   }, { threshold: 0.1 });
-
   document.querySelectorAll('.reveal').forEach((el, i) => {
     el.dataset.delay = (i % 4) * 80;
     observer.observe(el);
   });
-
-  // COUNTER ANIMATION
+ 
   function animateCount(el, target) {
     let current = 0;
     const step = target / 40;
@@ -1404,7 +1328,6 @@
       }
     }, 40);
   }
-
   const counters = document.querySelectorAll('[data-count]');
   const counterObserver = new IntersectionObserver(entries => {
     entries.forEach(entry => {
@@ -1415,8 +1338,7 @@
     });
   }, { threshold: 0.5 });
   counters.forEach(c => counterObserver.observe(c));
-
-  // FORM SUBMIT
+ 
   function handleFormSubmit(btn) {
     btn.textContent = '✓ Message envoyé !';
     btn.style.background = 'rgba(0,229,195,0.15)';
@@ -1429,8 +1351,7 @@
       btn.style.boxShadow = '';
     }, 3000);
   }
-
-  // NAV active highlight on scroll
+ 
   const sections = document.querySelectorAll('section[id]');
   const navLinks = document.querySelectorAll('.nav-links a');
   window.addEventListener('scroll', () => {
@@ -1445,3 +1366,4 @@
 </script>
 </body>
 </html>
+
